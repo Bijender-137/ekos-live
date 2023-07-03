@@ -1,38 +1,652 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+.ff_raleway {
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ff_manrope {
+  font-family: 'Manrope', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  text-decoration: none !important;
+  list-style-type: none !important;
+  box-sizing: border-box !important;
 }
 
-.App-header {
-  background-color: #282c34;
+:root {
+  --fs-xsm: 13px;
+  --fs-sm: 14px;
+  --fs-md: 15px;
+  --fs-lg: 16px;
+  --fs-xl: 28px;
+  --fs-xxl: 30px;
+  --clr-dark-gray: #B5B2B1;
+  --clr-lite-orange: #FF6600;
+  --clr-lite-white: #BEBBB5;
+  --clr-white-204: #CCCCCC;
+}
+
+.clr_lite_white {
+  color: var(--clr-lite-white);
+}
+
+.clr_white_204 {
+  color: var(--clr-white-204);
+}
+
+.clr_dark_gray {
+  color: var(--clr-dark-gray);
+}
+
+.clr_lite_orange {
+  color: var(--clr-lite-orange);
+}
+
+.fs_xsm {
+  font-size: var(--fs-xsm);
+}
+
+.fs_sm {
+  font-size: var(--fs-sm);
+}
+
+.fs_md {
+  font-size: var(--fs-md);
+}
+
+.fs_lg {
+  font-size: var(--fs-lg);
+}
+
+.fs_xl {
+  font-size: var(--fs-xl);
+}
+
+.fs_xxl {
+  font-size: var(--fs-xxl);
+}
+
+/* hero section */
+.sec_custom_container_1140 {
+  max-width: 1140px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.hero_sec_bg_img {
+  background-image: url("./assets//img//png/hero_sec_bg_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text_capital {
+  text-transform: capitalize;
+}
+
+.btn_discover {
+  background: #F60;
+  box-shadow: 0px 3px 49px 0px rgba(255, 102, 0, 0.50);
+  padding: 14px 32px;
+  transition: 0.4s ease-in-out;
+}
+
+.btn_discover:hover {
+  background: #CCCCCC;
+  color: #F60 !important;
+}
+
+/* ekoslive-section */
+.ekoslive_custome_container {
+  max-width: 1045px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.bg_circel_ekolives_yellow {
+  border-radius: 216.825px;
+  background: rgba(255, 184, 0, 0.74);
+  filter: blur(170px);
+  width: 216.825px;
+  height: 216.825px;
+  z-index: 1;
+}
+
+.bg_circel_ekolives_orange {
+  border-radius: 194.389px;
+  background: #F60;
+  filter: blur(150px);
+  width: 194.389px;
+  height: 194.389px;
+  z-index: 1;
+}
+
+.bg_set_ekolive_orange {
+  top: 10%;
+  left: 0px;
+}
+
+.bg_set_ekolive_yellow {
+  left: 40%;
+  top: 40%;
+}
+/* preloader */
+.preloader-bg {
+  background-color: white !important;
+  min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+.preloader {
+  animation: preloader 5s infinite;
+}
+
+@keyframes preloader {
+  0% {
+    scale: 0.5;
+  }
+
+  50% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 0.5;
+  }
+} 
+
+/* our-features */
+.our_features_bg_img {
+  background-image: url("./assets/img//png//our_features_bg_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.community_bg_elips_set{
+  bottom: 10px;
+  left: 0;
+}
+
+.our_featur_box_layout {
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(9.5px);
+  padding: 40px 10px 50px 10px;
+  transition: 0.6s ease-in-out !important;
+}
+
+.our_featur_box_layout:hover svg path {
+  fill: rgba(255, 102, 0, 1) !important;
+}
+
+.our_featur_box_layout:hover .text-white {
+  color: rgba(255, 102, 0, 1) !important;
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+.pricing_box:hover .bg_clr{
+background-color: #F60 !important;
+}
+.pricing_box:hover.btn_choose_plan{
+  background: #F60 !important;
+}
+
+/* platform-sec */
+.platform_bg_elips_circel {
+  border-radius: 204.306px;
+  opacity: 0.800000011920929;
+  background: #F60;
+  filter: blur(140px);
+  width: 204.306px;
+  height: 260.306px;
+}
+
+.platform_blur_set {
+  left: -90px;
+  top: 10px;
+}
+
+.platform_img_w {
+  width: 100%;
+}
+
+/* Integrations */
+.integration_custome_container {
+  max-width: 968px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.integration_box {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(9.5px);
+  padding: 20px 0 20px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.integration_box:hover {
+  transform: translateY(-20px);
+}
+
+.integration_box:hover .text-white {
+  color: #FF6600 !important;
+}
+
+.astrobin_img_w {
+  max-width: 90px;
+}
+
+.telescop_img_w {
+  max-width: 90px;
+}
+
+.wordwide_img_w {
+  max-width: 90px;
+}
+
+.astromet_img_w {
+  max-width: 90px;
+}
+
+.integration_elip_1_set {
+  right: 0;
+  top: 50%;
+}
+
+.integration_elip_2_set {
+  right: 0;
+  top: 80%;
+}
+
+/* observatory-sec */
+.observatry_bg_img_2 {
+  background-image: url("./assets//img/png/obswrvatory_img_bg_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.obeservatory_img_left_0 {
+  left: 0;
+}
+
+.obeservatory_img_w {
+  max-width: 636px;
+}
+
+/* footer */
+.footer_bg_clr {
+  background: #171717;
+}
+
+.transition_04 {
+  transition: 0.4s ease-in-out;
+}
+
+.app_bg_circel {
+  width: 33.363px;
+  height: 33.155px;
+  background-color: #232323;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  transition: 0.6s ease-in-out;
+}
+
+.app_bg_circel:hover {
+  background-color: white;
+}
+
+.app_bg_circel:hover path {
+  fill: #F60;
+}
+
+.app_bg_circel svg path {
+  transition: all 0.6s ease-in-out;
+}
+
+ul li a {
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+  color: #F60 !important;
+}
+
+.footer_underline {
+  opacity: 0.30000001192092896;
+  background: #FFF;
+  height: 1px;
+}
+
+.opacity_08 {
+  opacity: 0.8;
+}
+
+.bg_body {
+  background-color: linear-gradient( rgba(0, 0, 0, 0.94) 100%), cover no-repeat;
+  backdrop-filter: blur(9.5px);
+  height: 30px;
+  width: 100%;
+  bottom: -17px;
+}
+
+/* princing plan */
+.pricing_bg_img {
+  background-image: url("./assets//img/png/pricing_bg_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg_clr_princing_box_1 {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.princing_box_p {
+  padding: 21px 0;
+}
+
+.pricing_plan_w {
+  max-width: 1100px;
+}
+
+.btn_choose_plan {
+  opacity: 0.699999988079071;
+  background: #F60;
+  box-shadow: 0px 3px 49px 0px rgba(255, 102, 0, 0.50);
+  padding: 14px 32px;
+  transition: 0.4s ease-in-out;
+}
+
+.pricing_plan_box:hover {
+  background: rgba(255, 102, 0, 0.15);
+}
+
+.navbar_bg_clr {
+  background: #103243 !important;
+  backdrop-filter: blur(6.5px) !important;
+}
+
+.input_bg_clr {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.10);
+  width: 260px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn_nav {
+  border: 1px solid #FFF;
+  padding: 12px 24px;
+  transition: 0.4s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn_nav:hover {
+  background: #CCCCCC !important;
+  color: #F60 !important;
+}
+
+.btn_nav_sign {
+  padding: 11px 24px;
+  background-color: #F60;
+  border: 1px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.btn_nav_sign:hover {
+  background: #CCCCCC;
+  color: #F60 !important;
+}
+
+::placeholder {
+  color: #C0C4C9;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* community */
+.community_icon_width {
+  max-width: 50px;
+}
+
+.community_img_width {
+  max-width: 640px !important;
+}
+
+.community_img_set {
+  right: 0;
+}
+
+/* vidio-section */
+.vidio_icon_set {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vidio_img_h {
+  height: 641px;
+}
+
+/* ..........**************** */
+.menubar {
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  z-index: 6;
+}
+
+.menubar-2 {
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  z-index: 6;
+}
+
+.z_index_minus {
+  z-index: -1;
+}
+
+.lining {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-top: 3px;
+  margin-left: 0px;
+  margin-bottom: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.lining_2 {
+  width: 13px;
+  margin-right: 6px;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* responsive */
+@media (min-width:576px) {
+  :root {
+    --fs-xsm: 14px;
+    --fs-sm: 15px;
+    --fs-md: 17px;
+    --fs-lg: 18px;
+    --fs-xl: 25px;
+    --fs-xxl: 28px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .ekolive_img_w {
+    max-width: 358px !important;
   }
+}
+
+@media (min-width:767.98px) {
+  :root {
+    --fs-sm: 16px;
+    --fs-md: 18px;
+    --fs-lg: 20px;
+    --fs-xl: 30px;
+    --fs-xxl: 35px;
+  }
+
+  .input_bg_clr {
+    width: 340px;
+  }
+
+  .integration_box {
+    padding: 31px 0 40px 0;
+  }
+
+  .max_w_537 {
+    max-width: 537px;
+  }
+
+  .platform_img_w {
+    max-width: 400px !important;
+  }
+
+  .astrobin_img_w {
+    max-width: 122px;
+  }
+
+  .telescop_img_w {
+    max-width: 112px;
+  }
+
+  .wordwide_img_w {
+    max-width: 80px;
+  }
+
+  .astromet_img_w {
+    max-width: 148px;
+  }
+  .observatory_bg_img {
+    background-image: url("./assets/img/png/bg_moon_img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width:991.98px) {
+  :root {
+    --fs-md: 20px;
+    --fs-lg: 22px;
+    --fs-xl: 35px;
+    --fs-xxl: 40px;
+  }
+ 
+
+  .community_img_h {
+    height: 550px;
+  }
+
+  .astromet_img_w {
+    max-width: 188px;
+  }
+
+  .line_h_180 {
+    line-height: 180%;
+  }
+
+  .line_h_150 {
+    line-height: 150%;
+  }
+
+  .community_icon_width {
+    max-width: 64px;
+  }
+}
+
+@media (min-width:1199.98px) {
+  .vh_100_xl {
+    min-height: 100vh;
+  }
+
+  :root {
+    --fs-xsm: 14px;
+    --fs-sm: 16px;
+    --fs-md: 20px;
+    --fs-lg: 24px;
+    --fs-xl: 44px;
+    --fs-xxl: 52px;
+  }
+
+  .btn_discover {
+    padding: 14px 32px;
+  }
+}
+
+@media (min-width:1399.98px) {
+  .text_nowrap_xxl {
+    white-space: nowrap;
+  }
+
+  .obeservatory_img_h {
+    height: 480px;
+  }
+}
+
+@media (max-width:1200px) {
+  .menubar {
+    display: block;
+    z-index: 15;
+  }
+  .width_1100{
+    width: 1150px;
+  }
+
+  .menubar-2 .lining:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menubar-2 .lining:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+
+  .menubar-2 .lining:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-sec {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.6s linear;
+    clip-path: circle(0px at calc(100% - 45px) 45px);
+  }
+
+  .nav-sec-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 5;
+    opacity: 1;
+    transition: 0.6s linear;
+    clip-path: circle(75%);
+    background-color: black;
+  }
+
 }
